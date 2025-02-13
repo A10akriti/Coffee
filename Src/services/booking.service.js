@@ -5,7 +5,7 @@ class BookingService {
     bookingvalidation = async(data) => { //method which takes data as argument
         try {
             let rules = Joi.object({ //used to define validation schema for objects
-             userId: Joi.string().required(),
+            name: Joi.string().required(),
              dateAndtime: Joi.date().required(),
              message: Joi.string().optional()
             });
