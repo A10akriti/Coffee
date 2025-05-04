@@ -4,14 +4,14 @@ const Routes = require("./routes");
 const { MulterError } = require("multer");
 const app = express();
 require("./config/database.config");
-
-app.use(
-  express.json(),
-  express.urlencoded({
-    extended: true,
-  })
-);
+require("dotenv").config(); 
 app.use(cors());
+
+app.use(express.json());
+app.use(express.urlencoded({
+    extended:true
+  }));
+  
 app.use(Routes);
 
 app.use((req, res, next) => {
@@ -45,11 +45,11 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(3005, "localhost", (err) => {
+app.listen(3004, "localhost", (err) => {
   if (err) {
     console.log("Error while listening server", err);
   } else {
-    console.log("Server is listening to port ", 3005);
+    console.log("Server is listening to port ", 3004);
     console.log("Press Ctrl + C to Disconnect server");
   }
 });

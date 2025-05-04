@@ -1,5 +1,4 @@
 const bookingCtrl = require("../Src/controller/booking.controller");
-
 const BookingRoutes = require("express").Router();
 
 BookingRoutes.post("/createbooking", bookingCtrl.createBooking);

@@ -44,7 +44,6 @@ class AuthController {
       });
     }
   };
-
   register = async (req, res, next) => {
     try {
       let data = req.body;

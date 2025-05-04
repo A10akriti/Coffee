@@ -23,6 +23,7 @@ class AuthService {
         email: Joi.string().email().required(),
         password: Joi.string().required(),
         phone: Joi.number(),
+        role: Joi.string().valid("User", "Admin").default("User")
       });
 
       let response = rules.validate(data);

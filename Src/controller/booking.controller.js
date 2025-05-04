@@ -61,8 +61,14 @@ class BookingController {
       if (data.dateAndtime) {
         bookingDetails.dateAndtime = data.dateAndtime;
       }
+      if (data.email) {
+        bookingDetails.email = data.email
+      }
       if (data.message) {
         bookingDetails.message = data.message;
+      }
+      if (data.phoneNumber) {
+        bookingDetails.phoneNumber = data.message;
       }
 
       let validateBooking = await bookingSrv.bookingValidation(bookingDetails);

@@ -7,6 +7,8 @@ class BookingService {
             let rules = Joi.object({ //used to define validation schema for objects
             name: Joi.string().required(),
              dateAndtime: Joi.date().required(),
+             email: Joi.string().required(),
+             phoneNumber: Joi.string().required(),
              message: Joi.string().optional()
             });
 
